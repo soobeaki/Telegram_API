@@ -1,0 +1,63 @@
+# SERVER
+server:
+  port: 8089
+  shutdown: graceful
+
+# SPRING BOOT
+spring:
+  application:
+    name: "Telegram API"
+  # devtools:
+  #   add-properties: true
+  #   restart:
+  #     enabled: true
+  #   livereload:
+  #     enabled: true  
+  # resource:
+  #   static-locations: classpath:/static/
+  netty:
+    accesslog:
+      enabled: true
+  profiles:
+    active: "local"
+  pid:
+    file: telegram-api.pid
+
+# LOG
+logging:
+  level:
+    "[org.springdoc]": DEBUG
+    "[org.springframework.web.reactive.function.server]": DEBUG
+    web: DEBUG
+    "[org.springframework.web.reactive.handler.SimpleUrlHandlerMapping]": INFO
+
+springdoc:
+  api-docs:
+    path: /api-docs                             # api-docs url: localhost:8089/api-docs
+    groups:
+      enabled: true                             # group 허용
+  swagger-ui:
+    path: /swagger-ui.html                      # swagger url : localhost:8089/webjars/swagger-ui/index.html
+    enabled: true
+    groups-order: ASC                           # group 정렬 오름차순
+    tags-sorter: alpha                          # tag 정렬 알파벳순
+    operations-sorter: alpha                    # api 정렬 알파벳순
+    display-request-duration: true              # api 실행 시간 표시(milliseconds)
+    doc-expansion: none                         # swagger tag 리스트 펼치기
+  cache:
+    disabled: true
+  override-with-generic-response: false
+  model-and-view-allowed: true                  # returnType ModelAndView swagger
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+
+#API-Version
+api-version: v3
+
+#외부 API
+external:
+  api:
+    telegram:
+      url: https://api.telegram.org/bot
+      token: 7324573561:AAGLghlW4U4YOFhplFkmujXaNA7aYgiWO6Y
+      chat-id: -1002226396941

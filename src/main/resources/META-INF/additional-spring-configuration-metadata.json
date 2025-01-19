@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "spring.resource.static-locations",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.resource.static-locations'"
+  },
+  {
+    "name": "external.api.telegram.url",
+    "type": "java.lang.String",
+    "description": "A description for 'external.api.telegram.url'"
+  },
+  {
+    "name": "external.api.telegram.chat-id",
+    "type": "java.lang.String",
+    "description": "A description for 'external.api.telegram.chat-id'"
+  },
+  {
+    "name": "external.api.telegram.token",
+    "type": "java.lang.String",
+    "description": "A description for 'external.api.telegram.token'"
+  },
+  {
+    "name": "spring.netty.accesslog.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.netty.accesslog.enabled'"
+  },
+  {
+    "name": "api-version",
+    "type": "java.lang.String",
+    "description": "A description for 'api-version'"
+  }
+]}
